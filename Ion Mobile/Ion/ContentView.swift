@@ -65,7 +65,7 @@ struct ContentView: View {
                 })
                 .disabled(!model.canGoForward)
                 Button(action: {
-                    model.reloadPage  ()
+                    model.reloadPage()
                 }, label: {
                     Image(systemName: "arrow.clockwise")
                 })
