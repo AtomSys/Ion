@@ -59,4 +59,13 @@ class WebViewModel: ObservableObject {
     func reloadPage() {
         webView.reload()
     }
+    func searchWork(){
+        let str = "\(urlString)"
+        let replaced = str.replacingOccurrences(of: " ", with: "%20")
+        guard let url = URL(string: "https://www.google.com/search?q=\(replaced)") else {
+            return
+        }
+        webView.customUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_3_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15"
+        webView.load(URLRequest(url: url))
+    }
 }

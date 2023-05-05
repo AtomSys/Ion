@@ -45,6 +45,11 @@ struct ContentView: View {
                                     Image(systemName: "arrow.right")
                                 })
                                 Button(action: {
+                                    model.searchWork()
+                                }, label: {
+                                    Image(systemName: "magnifyingglass")
+                                })
+                                Button(action: {
                                     model.goBack()
                                 }, label: {
                                     Image(systemName: "chevron.left")
