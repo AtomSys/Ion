@@ -37,6 +37,26 @@ struct ContentView: View {
                                   text: $model.urlString)
                             .disableAutocorrection(true)
                             .padding(10)
+                            .focusable()
+                            .touchBar {
+                                Button(action: {
+                                    model.loadUrl()
+                                }, label: {
+                                    Image(systemName: "arrow.right")
+                                })
+                                Button(action: {
+                                    model.goBack()
+                                }, label: {
+                                    Image(systemName: "chevron.left")
+                                })
+                                .disabled(!model.canGoBack)
+                                Button(action: {
+                                    model.goForward()
+                                }, label: {
+                                    Image(systemName: "chevron.right")
+                                })
+                                .disabled(!model.canGoForward)
+                            }
                         Button(action: {
                             model.reloadPage  ()
                         }, label: {
