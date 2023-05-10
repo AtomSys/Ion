@@ -26,6 +26,7 @@ class WebViewModel: ObservableObject {
     @Published var canGoBack: Bool = false
     @Published var canGoForward: Bool = false
     @Published var isLoading: Bool = false
+    @Published var docShown: Bool = true
     @Published var aturl: String = ""
     
 
@@ -67,5 +68,8 @@ class WebViewModel: ObservableObject {
         }
         webView.customUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_3_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15"
         webView.load(URLRequest(url: url))
+    }
+    func hideDoc(){
+        docShown = false
     }
 }

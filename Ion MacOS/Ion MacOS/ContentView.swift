@@ -14,7 +14,8 @@ struct ContentView: View {
     @StateObject var model = WebViewModel()
     
     var body: some View {
-        ZStack(alignment: .bottom) {
+        if model.docShown {
+        ZStack(alignment: .top) {
             Color.gray
                 .ignoresSafeArea()
             
@@ -35,33 +36,33 @@ struct ContentView: View {
                         .disabled(!model.canGoForward)
                         TextField("Tap an url",
                                   text: $model.urlString)
-                            .disableAutocorrection(true)
-                            .padding(10)
-                            .focusable()
-                            .touchBar {
-                                Button(action: {
-                                    model.loadUrl()
-                                }, label: {
-                                    Image(systemName: "arrow.right")
-                                })
-                                Button(action: {
-                                    model.searchWork()
-                                }, label: {
-                                    Image(systemName: "magnifyingglass")
-                                })
-                                Button(action: {
-                                    model.goBack()
-                                }, label: {
-                                    Image(systemName: "chevron.left")
-                                })
-                                .disabled(!model.canGoBack)
-                                Button(action: {
-                                    model.goForward()
-                                }, label: {
-                                    Image(systemName: "chevron.right")
-                                })
-                                .disabled(!model.canGoForward)
-                            }
+                        .disableAutocorrection(true)
+                        .padding(10)
+                        .focusable()
+                        .touchBar {
+                            Button(action: {
+                                model.loadUrl()
+                            }, label: {
+                                Image(systemName: "arrow.right")
+                            })
+                            Button(action: {
+                                model.searchWork()
+                            }, label: {
+                                Image(systemName: "magnifyingglass")
+                            })
+                            Button(action: {
+                                model.goBack()
+                            }, label: {
+                                Image(systemName: "chevron.left")
+                            })
+                            .disabled(!model.canGoBack)
+                            Button(action: {
+                                model.goForward()
+                            }, label: {
+                                Image(systemName: "chevron.right")
+                            })
+                            .disabled(!model.canGoForward)
+                        }
                         Button(action: {
                             model.reloadPage  ()
                         }, label: {
@@ -86,6 +87,7 @@ struct ContentView: View {
                             .progressViewStyle(CircularProgressViewStyle())
                     }
                 }
+            }
                 .focusable()
                             .touchBar {
                                 Button(action: {
