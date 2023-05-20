@@ -13,5 +13,11 @@ struct Ion_MacOSApp: App {
         WindowGroup {
             ContentView()
         }
+        .commands {
+            CommandMenu("Load") {
+                Button("Load Webpage") { WebViewModel().loadUrl()}
+                .keyboardShortcut("S")
+            }
+        }
     }
 }

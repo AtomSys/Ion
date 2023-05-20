@@ -12,7 +12,6 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var model = WebViewModel()
-    
     var body: some View {
         if model.docShown {
         ZStack(alignment: .top) {
