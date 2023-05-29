@@ -6,18 +6,28 @@
 //
 
 import SwiftUI
+import WebKit
 
 @main
 struct Ion_MacOSApp: App {
+    @StateObject var model = WebViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
         .commands {
-            CommandMenu("Load") {
-                Button("Load Webpage") { WebViewModel().loadUrl()}
+            CommandMenu("Visibility") {
+                Button("Show") {
+                    model.docShown = true
+                }
                 .keyboardShortcut("S")
+                
+                Button("Hide") {
+                    model.docShown = false
+                }
+                .keyboardShortcut("H")
             }
         }
+
     }
 }

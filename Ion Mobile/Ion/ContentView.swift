@@ -69,7 +69,7 @@ struct ContentView: View {
                 }, label: {
                     Image(systemName: "arrow.clockwise")
                 })
-                Text("\(model.urlString)")
+                Text("\(WebViewNavigationDelegate().a)")
                 Spacer()
             }
         }

@@ -8,9 +8,12 @@
 import WebKit
 
 class WebViewNavigationDelegate: NSObject, WKNavigationDelegate {
+    @Published var a: String = ""
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        // TODO
-        decisionHandler(.allow)
+        let a = ""
+        if let urlStr = navigationAction.request.url?.absoluteString {
+            WebViewModel().aturl = "\(urlStr)"
+        }
     }
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {

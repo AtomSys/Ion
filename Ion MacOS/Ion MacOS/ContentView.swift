@@ -33,11 +33,10 @@ struct ContentView: View {
                             Image(systemName: "chevron.right")
                         })
                         .disabled(!model.canGoForward)
-                        TextField("Tap an url",
+                        TextField("Type a url or a search",
                                   text: $model.urlString)
                         .disableAutocorrection(true)
                         .padding(10)
-                        .focusable()
                         Button(action: {
                             model.reloadPage  ()
                         }, label: {
@@ -88,12 +87,12 @@ struct ContentView: View {
                                     Image(systemName: "magnifyingglass")
                                 })
                         }
-                
             }
         }
 
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

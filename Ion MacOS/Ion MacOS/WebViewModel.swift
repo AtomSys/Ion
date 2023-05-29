@@ -28,6 +28,7 @@ class WebViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var docShown: Bool = true
     @Published var aturl: String = ""
+    @Published var test: Bool = true
     
 
     private func setupBindings() {

@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09041A7C2A045509000BB539 /* Ion MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ion MacOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09041A7C2A045509000BB539 /* Ion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09041A7F2A045509000BB539 /* Ion_MacOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ion_MacOSApp.swift; sourceTree = "<group>"; };
 		09041A812A045509000BB539 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		09041A832A04550B000BB539 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		09041A7D2A045509000BB539 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				09041A7C2A045509000BB539 /* Ion MacOS.app */,
+				09041A7C2A045509000BB539 /* Ion.app */,
 				09041A8D2A04550B000BB539 /* Ion MacOSTests.xctest */,
 				09041A972A04550B000BB539 /* Ion MacOSUITests.xctest */,
 			);
@@ -158,7 +158,7 @@
 			);
 			name = "Ion MacOS";
 			productName = "Ion MacOS";
-			productReference = 09041A7C2A045509000BB539 /* Ion MacOS.app */;
+			productReference = 09041A7C2A045509000BB539 /* Ion.app */;
 			productType = "com.apple.product-type.application";
 		};
 		09041A8C2A04550B000BB539 /* Ion MacOSTests */ = {
@@ -434,7 +434,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Ion MacOS/Ion_MacOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "Beta Release 0.1";
+				CURRENT_PROJECT_VERSION = "Beta Release 0.2";
 				DEVELOPMENT_ASSET_PATHS = "\"Ion MacOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 5W23635VYR;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -445,9 +445,9 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "Atom.Ion-MacOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Ion;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -461,7 +461,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Ion MacOS/Ion_MacOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = "Beta Release 0.1";
+				CURRENT_PROJECT_VERSION = "Beta Release 0.2";
 				DEVELOPMENT_ASSET_PATHS = "\"Ion MacOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 5W23635VYR;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -472,9 +472,9 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "Atom.Ion-MacOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Ion;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
