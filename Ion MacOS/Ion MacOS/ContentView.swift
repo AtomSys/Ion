@@ -10,12 +10,14 @@ import WebKit
 import SwiftUI
 
 struct ContentView: View {
-    var tabs = ["Web"]
     @State public var selectedTab = "Web"
     @StateObject var model = WebViewModel()
     var body: some View {
-        if selectedTab == "Tab 1" {
+        if selectedTab == "Web" {
             TabView()
+        }
+        if selectedTab == "Bookmarks" {
+            BookmarksView()
         }
     }
 }

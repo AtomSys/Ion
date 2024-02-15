@@ -46,6 +46,11 @@ struct TabView: View {
                             }, label: {
                                 Image(systemName: "arrow.right")
                             })
+                            Button(action: {
+                                ContentView().selectedTab = "Bookmarks"
+                            }, label: {
+                                Image(systemName: "star.fill")
+                            })
                         }
                         .background(Color.gray)
                         .cornerRadius(30)
