@@ -44,11 +44,7 @@ class WebViewModel: ObservableObject {
     }
 
     func loadUrl() {
-        guard let url = URL(string: urlString) else {
-            return
-        }
-        webView.customUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_3_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15"
-        webView.load(URLRequest(url: url))
+        loadPage(url: urlString)
     }
 
     func goForward() {
@@ -64,11 +60,26 @@ class WebViewModel: ObservableObject {
     func searchWork(){
         let str = "\(urlString)"
         let replaced = str.replacingOccurrences(of: " ", with: "%20")
-        guard let url = URL(string: "https://www.google.com/search?q=\(replaced)") else {
+        let url = "https://www.google.com/search?q=\(replaced)"
+        loadPage(url: url)
+    }
+    func loadPage(url: String) {
+        if url.contains("https://") {
+        } else {
+            let url = "https://\(url)"
+            guard let urls = URL(string: url) else {
+                return
+            }
+            webView.customUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_3_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15"
+            webView.load(URLRequest(url: urls))
+            print("Loaded URL: \(url)")
+        }
+        guard let urls = URL(string: url) else {
             return
         }
         webView.customUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_3_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15"
-        webView.load(URLRequest(url: url))
+        webView.load(URLRequest(url: urls))
+        print("Loaded URL: \(url)")
     }
     func hideDoc(){
         docShown = false

@@ -18,6 +18,9 @@
 		09041AAD2A04559A000BB539 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09041AAC2A04559A000BB539 /* WebViewModel.swift */; };
 		09041AAF2A0455E2000BB539 /* WebViewNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09041AAE2A0455E2000BB539 /* WebViewNavigationDelegate.swift */; };
 		09CE83CE2A05BD7900E6568F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09CE83CD2A05BD7900E6568F /* Info.plist */; };
+		09D0CCDE2B7193E400260750 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CCDD2B7193E400260750 /* TabView.swift */; };
+		09D0CCE02B719B7100260750 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CCDF2B719B7100260750 /* Documentation.docc */; };
+		09D0CCE22B719C5600260750 /* BookmarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D0CCE12B719C5600260750 /* BookmarksView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +55,12 @@
 		09041AAA2A045588000BB539 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		09041AAC2A04559A000BB539 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
 		09041AAE2A0455E2000BB539 /* WebViewNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewNavigationDelegate.swift; sourceTree = "<group>"; };
+		097C79792A3646F5005CE617 /* BetterTextField */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = BetterTextField; path = ../../BetterTextField; sourceTree = "<group>"; };
+		097C797A2A364964005CE617 /* BetterTextField */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = BetterTextField; path = ../../BetterTextField; sourceTree = "<group>"; };
 		09CE83CD2A05BD7900E6568F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09D0CCDD2B7193E400260750 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		09D0CCDF2B719B7100260750 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
+		09D0CCE12B719C5600260750 /* BookmarksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 		09041A732A045509000BB539 = {
 			isa = PBXGroup;
 			children = (
+				09C972CE2A254C3A00711DC1 /* Packages */,
 				09041A7E2A045509000BB539 /* Ion MacOS */,
 				09041A902A04550B000BB539 /* Ion MacOSTests */,
 				09041A9A2A04550B000BB539 /* Ion MacOSUITests */,
@@ -112,6 +121,9 @@
 				09041A832A04550B000BB539 /* Assets.xcassets */,
 				09041A882A04550B000BB539 /* Ion_MacOS.entitlements */,
 				09041A852A04550B000BB539 /* Preview Content */,
+				09D0CCDD2B7193E400260750 /* TabView.swift */,
+				09D0CCDF2B719B7100260750 /* Documentation.docc */,
+				09D0CCE12B719C5600260750 /* BookmarksView.swift */,
 			);
 			path = "Ion MacOS";
 			sourceTree = "<group>";
@@ -139,6 +151,15 @@
 				09041A9D2A04550B000BB539 /* Ion_MacOSUITestsLaunchTests.swift */,
 			);
 			path = "Ion MacOSUITests";
+			sourceTree = "<group>";
+		};
+		09C972CE2A254C3A00711DC1 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				097C79792A3646F5005CE617 /* BetterTextField */,
+				097C797A2A364964005CE617 /* BetterTextField */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,8 +295,11 @@
 			files = (
 				09041AAB2A045588000BB539 /* WebView.swift in Sources */,
 				09041A822A045509000BB539 /* ContentView.swift in Sources */,
+				09D0CCE22B719C5600260750 /* BookmarksView.swift in Sources */,
+				09D0CCE02B719B7100260750 /* Documentation.docc in Sources */,
 				09041A802A045509000BB539 /* Ion_MacOSApp.swift in Sources */,
 				09041AAD2A04559A000BB539 /* WebViewModel.swift in Sources */,
+				09D0CCDE2B7193E400260750 /* TabView.swift in Sources */,
 				09041AAF2A0455E2000BB539 /* WebViewNavigationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
