@@ -47,7 +47,7 @@ struct TabView: View {
                                 Image(systemName: "arrow.right")
                             })
                             Button(action: {
-                                ContentView().selectedTab = "Bookmarks"
+                                model.showBookmarks()
                             }, label: {
                                 Image(systemName: "star.fill")
                             })

@@ -13,10 +13,10 @@ struct ContentView: View {
     @State public var selectedTab = "Web"
     @StateObject var model = WebViewModel()
     var body: some View {
-        if selectedTab == "Web" {
+        if model.selected == "Web" {
             TabView()
         }
-        if selectedTab == "Bookmarks" {
+        if model.selected == "Bookmarks" {
             BookmarksView()
         }
     }

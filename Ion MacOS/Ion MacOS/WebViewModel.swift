@@ -29,6 +29,7 @@ class WebViewModel: ObservableObject {
     @Published var docShown: Bool = true
     @Published var aturl: String = ""
     @Published var test: Bool = true
+    @Published var selected: String = "Web"
     
 
     private func setupBindings() {
@@ -83,5 +84,8 @@ class WebViewModel: ObservableObject {
     }
     func hideDoc(){
         docShown = false
+    }
+    func showBookmarks() {
+        selected = "Bookmarks"
     }
 }
